@@ -28,6 +28,15 @@ inet6  fdaa:abcd:ffff:aaaa::53 64
 
 - set option for rtadvd
 
+/etc/rtadvd.conf                                                     
+
+```
+ifname:\
+:addr="fdaa:abcd:ffff:aaaa::":prefixlen#64:\
+:rdnss="fe80::1,fdaa:abcd:ffff:aaaa::53":\
+:dnssl:="ace.labnet":
+```
+
 /etc/rc.conf
 
 ```
