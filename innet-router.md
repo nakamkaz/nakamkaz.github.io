@@ -86,11 +86,13 @@ include ".nft_filePATH"
 firewalld ONLY (MORE simple)
 
 1.  net.ipv4.ip_forward=1
+
 ````
 # sysctl -w net.ipv4.ip_forward=1
 ````
 
 Create a file in /etc/sysctl.d/
+
 ````
 # echo net.ipv4.ip_forward=1 > /etc/sysctl.d/myrouter.conf
 ````
@@ -102,6 +104,7 @@ Create a file in /etc/sysctl.d/
 ````
 
 3. Assign zones to NICs
+
 ````
 # nmcli conn mod eth0 connection.zone external
 # nmcli conn mod eth1 connection.zone trusted
